@@ -18,6 +18,6 @@ public class PipeMiddleScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        logic.AddScore();
+        logic.AddScore(1);
     }
 }
