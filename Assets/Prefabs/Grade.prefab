@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1119524293626354084}
   - component: {fileID: 7839761533408931453}
   - component: {fileID: 3113712377110343921}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Grade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.27, y: 3.29}
+  m_Size: {x: 4, y: 3.64}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -160,10 +160,11 @@ MonoBehaviour:
   - {fileID: -6470460504253458178, guid: 398ebe5d31d47c44f91499e71b513a08, type: 3}
   - {fileID: -4178046375966092550, guid: 49c04ccb2019fba49b462492f9a01332, type: 3}
   - {fileID: 4130640169021434097, guid: 8f30351d2f9297345b45ab140d325cc0, type: 3}
-  - {fileID: 3465286685962602723, guid: f21573220f6b51c46ba7d25ee45a62a8, type: 3}
+  - {fileID: -9091539399625358973, guid: f21573220f6b51c46ba7d25ee45a62a8, type: 3}
   - {fileID: 7028616704906629411, guid: 90c89c1b4e2b82d47a42462064b8a3ec, type: 3}
   - {fileID: 8288426215254106694, guid: efaa42a067c0a264e969ebc3f7a28260, type: 3}
   - {fileID: 4113829005332862926, guid: 855d1f58b07f3d64fb32e813e26b6edc, type: 3}
   - {fileID: -5099292496197868168, guid: cff0a2910ddd75e4a8f39adb45091d15, type: 3}
   spriteRenderer: {fileID: 5305043014741635135}
   gradeNumber: 0
+  logicScript: {fileID: 0}
