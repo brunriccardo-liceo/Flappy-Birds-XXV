@@ -23,7 +23,32 @@ public class GradeScript : MonoBehaviour
         if (collision.gameObject.layer == 3)
         {
             logicScript.AddGradeToMean(gradeNumber);
+            PlayGradeSound(gradeNumber);
             Destroy(gameObject);
+        }
+    }
+
+    private void PlayGradeSound(int gradeNumber)
+    {
+        if (gradeNumber < 6)
+        {
+            AudioManager.instance.PlaySFX("pop");
+            AudioManager.instance.PlaySFX("gradeNo");
+        }
+        else if (gradeNumber >= 6 && gradeNumber < 8)
+        {
+            AudioManager.instance.PlaySFX("pop");
+            AudioManager.instance.PlaySFX("gradeGood");
+        }
+        else if (gradeNumber >= 8 && gradeNumber < 10)
+        {
+            AudioManager.instance.PlaySFX("pop");
+            AudioManager.instance.PlaySFX("gradeYeah");
+        }
+        else //è 10
+        {
+            AudioManager.instance.PlaySFX("pop");
+            AudioManager.instance.PlaySFX("gradeNice");
         }
     }
 

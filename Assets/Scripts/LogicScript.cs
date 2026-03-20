@@ -58,6 +58,7 @@ public class logicScript : MonoBehaviour
         Time.timeScale = 0;
         gameIsPaused = true;
         endOfLevel.SetActive(true);
+        AudioManager.instance.PlayMusic("ScoreScreen");
 
         if (behaviour > 5)
         {
@@ -103,6 +104,7 @@ public class logicScript : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        AudioManager.instance.PlayMusic("Level");
         Time.timeScale = 1;
         gameIsPaused = false;
     }

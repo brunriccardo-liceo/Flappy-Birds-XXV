@@ -3,7 +3,7 @@ using UnityEngine;
 public class BirdScript : MonoBehaviour
 {
 
-    public Rigidbody2D myRigidBody; 
+    public Rigidbody2D myRigidBody;
     public float flapStrenght = 10;
     public logicScript logic;
     public bool birdIsAlive = true;
@@ -14,7 +14,7 @@ public class BirdScript : MonoBehaviour
     void Start()
     {
         gameObject.name = "Calogero";
-        
+
     }
 
     // Update is called once per frame
@@ -22,13 +22,14 @@ public class BirdScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
         {
-            myRigidBody.linearVelocity = new Vector2(0, 1)*flapStrenght;
+            myRigidBody.linearVelocity = new Vector2(0, 1) * flapStrenght;
+            AudioManager.instance.PlaySFX("flap");
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        
+        AudioManager.instance.PlaySFX("impact");
         logic.GameOver();
     }
 }
