@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class GradeScript : MonoBehaviour
@@ -6,6 +7,30 @@ public class GradeScript : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public int gradeNumber;
     public logicScript logicScript;
+    public GameObject sparkles;
+    public ParticleSystem circle;
+
+    public GameObject effectOnDestroy;
+
+    private void SetEffects()
+    {
+        if (gradeNumber >= 8)
+        {
+            sparkles.SetActive(true);
+            var main = circle.main;
+            main.startColor = Color.green;
+        }
+        else if (gradeNumber >= 6 && gradeNumber < 8)
+        {
+            var main = circle.main;
+            main.startColor = Color.yellow;
+        }
+        else
+        {
+            var main = circle.main;
+            main.startColor = Color.red;
+        }
+    }
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -15,7 +40,7 @@ public class GradeScript : MonoBehaviour
         gradeNumber = randomIndex + 3;
         spriteRenderer.sprite = voti[randomIndex];
         logicScript = GameObject.FindGameObjectWithTag("logic").GetComponent<logicScript>();
-
+        SetEffects();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,6 +49,7 @@ public class GradeScript : MonoBehaviour
         {
             logicScript.AddGradeToMean(gradeNumber);
             PlayGradeSound(gradeNumber);
+            Instantiate(effectOnDestroy, gameObject.transform.position, gameObject.transform.rotation);
             Destroy(gameObject);
         }
     }

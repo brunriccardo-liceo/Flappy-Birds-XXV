@@ -7,6 +7,7 @@ public class BirdScript : MonoBehaviour
     public float flapStrenght = 10;
     public logicScript logic;
     public bool birdIsAlive = true;
+    public Animator animator;
 
 
 
@@ -24,6 +25,7 @@ public class BirdScript : MonoBehaviour
         {
             myRigidBody.linearVelocity = new Vector2(0, 1) * flapStrenght;
             AudioManager.instance.PlaySFX("flap");
+            animator.SetTrigger("BirdAnimation");
         }
     }
 

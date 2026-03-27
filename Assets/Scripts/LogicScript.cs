@@ -6,6 +6,8 @@ using System.Collections.Generic;
 public class logicScript : MonoBehaviour
 {
 
+    public SpriteRenderer birdSprite;
+    public Sprite deadBird;
 
     public GameObject gameOverScreen;
     public BirdScript bird;
@@ -112,6 +114,8 @@ public class logicScript : MonoBehaviour
     public void GameOver()
     {
         bird.birdIsAlive = false;
+        bird.animator.enabled = false;
+        birdSprite.sprite = deadBird;
         gameOverScreen.SetActive(true);
     }
 

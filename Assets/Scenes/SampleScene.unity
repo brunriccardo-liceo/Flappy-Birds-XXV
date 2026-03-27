@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 101247414}
   - component: {fileID: 101247417}
   - component: {fileID: 101247418}
+  - component: {fileID: 101247419}
   m_Layer: 3
   m_Name: Bird
   m_TagString: Untagged
@@ -502,6 +503,29 @@ MonoBehaviour:
   flapStrenght: 20
   logic: {fileID: 2023969986}
   birdIsAlive: 1
+  animator: {fileID: 101247419}
+--- !u!95 &101247419
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101247412}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bc1eabbc2752b1445961ad173a80be92, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &125189568
 GameObject:
   m_ObjectHideFlags: 0
@@ -3025,6 +3049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d2aba703d9e2b64483d8c20aacb14e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  birdSprite: {fileID: 101247415}
+  deadBird: {fileID: -8355726107281770561, guid: a794afae5cd6dc247b27c6acf0ef41f3, type: 3}
   gameOverScreen: {fileID: 1696179739}
   bird: {fileID: 101247418}
   pauseMenu: {fileID: 687728905}
