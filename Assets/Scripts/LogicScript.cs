@@ -12,6 +12,7 @@ public class logicScript : MonoBehaviour
     public GameObject gameOverScreen;
     public BirdScript bird;
     public GameObject pauseMenu;
+    public PlayerStats playerStats;
     public bool gameIsPaused = false;
     public GameObject darkBG;
 
@@ -26,7 +27,7 @@ public class logicScript : MonoBehaviour
     private string[] monthNames = { "Settembre", "Ottobre", "Novembre", "Dicembre", "Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno" };
 
     public GameObject endOfLevel;
-
+    public GameObject nextLevelButton;
     public float behaviour;
     public TextMeshProUGUI behaviourText;
     public TextMeshProUGUI endOfLevelTitleText;
@@ -64,10 +65,23 @@ public class logicScript : MonoBehaviour
 
         if (behaviour > 5)
         {
-            endOfLevelTitleText.text = "Promosso!";
-            endOfLevelSubtitleText.text = "Ottimo lavoro!";
-            endOfLevelBodyText.color = new Color32(39, 241, 6, 255);
-            endOfLevelBodyText.text = "Media dei voti: " + mean.ToString("F1") + "\nCondotta: " + behaviour + "\n\nMedia totale: " + ((mean + behaviour) / 2).ToString("F1");
+            PlayerStats.instance.AddToMean(mean);
+            nextLevelButton.SetActive(true);
+
+            if (PlayerStats.instance.currentLevel == 6) // se abbiamo finito il gioco
+            {
+                endOfLevelTitleText.text = "Finalmente maturo!";
+                endOfLevelSubtitleText.text = "È stata dura ma ce l'hai fatta!";
+                endOfLevelBodyText.color = new Color32(39, 241, 6, 255);
+                endOfLevelBodyText.text = "Voto finale dell'esame di stato: " + Mathf.RoundToInt(PlayerStats.instance.finalGrade);
+            }
+            else
+            {
+                endOfLevelTitleText.text = "Promosso!";
+                endOfLevelSubtitleText.text = "Ottimo lavoro!";
+                endOfLevelBodyText.color = new Color32(39, 241, 6, 255);
+                endOfLevelBodyText.text = "Media dei voti: " + mean.ToString("F1") + "\nCondotta: " + behaviour + "\n\nMedia totale: " + ((mean + behaviour) / 2).ToString("F1");
+            }
         }
         else
         {
@@ -100,7 +114,13 @@ public class logicScript : MonoBehaviour
         meanText.text = "Media dei voti: " + mean.ToString("F1");
     }
 
-
+    public void NextLevel()
+    {
+        Time.timeScale = 1f;
+        gameIsPaused = false;
+        SceneManager.LoadScene("Level" + PlayerStats.instance.currentLevel);
+        AudioManager.instance.PlayMusic("Level");
+    }
 
 
     public void RestartGame()

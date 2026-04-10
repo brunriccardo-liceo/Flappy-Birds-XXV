@@ -17,7 +17,7 @@ public class MenuScript : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Level1");
         AudioManager.instance.PlayMusic("Level");
     }
 

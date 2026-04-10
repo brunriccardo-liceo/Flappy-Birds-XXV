@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6403252182692130977}
   - component: {fileID: 6403252182692130911}
   - component: {fileID: 6403252182692130910}
-  - component: {fileID: 7899357176575643132}
+  - component: {fileID: 3559397400038883558}
   m_Layer: 0
   m_Name: Dust_permanently_blue
   m_TagString: Untagged
@@ -4918,7 +4918,7 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
---- !u!114 &7899357176575643132
+--- !u!114 &3559397400038883558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4927,9 +4927,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6403252182692130976}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4954962614c26fe47848ce5d038695b1, type: 3}
+  m_Script: {fileID: 11500000, guid: f6a8d80df81939e4889a7c31731ca040, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectMoveScript
+  m_EditorClassIdentifier: Assembly-CSharp::OjectMoveScript
   moveSpeed: 10
   deadZone: -45
 --- !u!1 &6403252182931296021

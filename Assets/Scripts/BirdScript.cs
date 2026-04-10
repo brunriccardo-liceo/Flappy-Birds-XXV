@@ -1,4 +1,6 @@
+using System.Numerics;
 using UnityEngine;
+
 
 public class BirdScript : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class BirdScript : MonoBehaviour
     public logicScript logic;
     public bool birdIsAlive = true;
     public Animator animator;
+    public GameObject smokeOnJump;
 
 
 
@@ -23,9 +26,11 @@ public class BirdScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
         {
-            myRigidBody.linearVelocity = new Vector2(0, 1) * flapStrenght;
+            myRigidBody.linearVelocity = new UnityEngine.Vector2(0, 1) * flapStrenght;
             AudioManager.instance.PlaySFX("flap");
             animator.SetTrigger("BirdAnimation");
+            UnityEngine.Vector3 smokePosition = new UnityEngine.Vector3(gameObject.transform.position.x - 3, gameObject.transform.position.y, 2);
+            Instantiate(smokeOnJump, smokePosition, gameObject.transform.rotation);
         }
     }
 
