@@ -65,7 +65,6 @@ public class logicScript : MonoBehaviour
 
         if (behaviour > 5)
         {
-            PlayerStats.instance.AddToMean(mean);
             nextLevelButton.SetActive(true);
 
             if (PlayerStats.instance.currentLevel == 6) // se abbiamo finito il gioco
@@ -116,6 +115,7 @@ public class logicScript : MonoBehaviour
 
     public void NextLevel()
     {
+        PlayerStats.instance.AddToMean(mean);
         Time.timeScale = 1f;
         gameIsPaused = false;
         SceneManager.LoadScene("Level" + PlayerStats.instance.currentLevel);
