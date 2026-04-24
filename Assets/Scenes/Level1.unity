@@ -1439,7 +1439,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5445623, g: 0.9245283, b: 0.5145959, a: 1}
+  m_Color: {r: 0.18431373, g: 0.64705884, b: 0.10980392, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1513,6 +1513,7 @@ GameObject:
   - component: {fileID: 717679037}
   - component: {fileID: 717679036}
   - component: {fileID: 717679038}
+  - component: {fileID: 717679039}
   m_Layer: 0
   m_Name: ObjectSpawner
   m_TagString: Untagged
@@ -1564,6 +1565,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ObjectSpawnScript
   obj: {fileID: 2745272720160743248, guid: 3aa190c1c44a03e408ef4bc7d1b20922, type: 3}
   spawnRate: 0.94
+  heightOffset: 15
+--- !u!114 &717679039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 717679035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a49b053087867a468200af32117ca2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectSpawnScript
+  obj: {fileID: 2745272720160743248, guid: 8b92fac6d8716d74783aaad8e2876de7, type: 3}
+  spawnRate: 4
   heightOffset: 15
 --- !u!1 &741291470
 GameObject:
@@ -1700,7 +1716,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 1.9979858, y: -11}
-  m_SizeDelta: {x: 677.9485, y: 143.3846}
+  m_SizeDelta: {x: 760, y: 143.3846}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &813735275
 GameObject:
@@ -1836,8 +1852,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 1.9979858, y: -106.5896}
-  m_SizeDelta: {x: 677.9485, y: 143.3846}
+  m_AnchoredPosition: {x: 1.9979858, y: -102.85834}
+  m_SizeDelta: {x: 763.7683, y: 147.1159}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &893646033
 GameObject:
@@ -3389,6 +3405,7 @@ MonoBehaviour:
   endOfLevelTitleText: {fileID: 1604734625}
   endOfLevelSubtitleText: {fileID: 222937212}
   endOfLevelBodyText: {fileID: 72884675}
+  maxBehaviour: 10
 --- !u!4 &2023969987
 Transform:
   m_ObjectHideFlags: 0

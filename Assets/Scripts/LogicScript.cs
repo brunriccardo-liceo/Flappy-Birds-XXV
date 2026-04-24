@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System;
 
 public class logicScript : MonoBehaviour
 {
@@ -33,6 +34,19 @@ public class logicScript : MonoBehaviour
     public TextMeshProUGUI endOfLevelTitleText;
     public TextMeshProUGUI endOfLevelSubtitleText;
     public TextMeshProUGUI endOfLevelBodyText;
+    public float maxBehaviour;
+    public void AbbassaCondotta()
+    {
+        if (maxBehaviour >= 3)
+        {
+            maxBehaviour -= 1f;
+        }
+        if (behaviour > maxBehaviour)
+        {
+            behaviour = maxBehaviour;
+        }
+        behaviourText.text = "Condotta: " + behaviour.ToString() + "/" + maxBehaviour;
+    }
 
 
     public void AddWeek(int week)
@@ -62,12 +76,13 @@ public class logicScript : MonoBehaviour
         gameIsPaused = true;
         endOfLevel.SetActive(true);
         AudioManager.instance.PlayMusic("ScoreScreen");
+        float mediaAnno = (mean + behaviour) / 2;
 
-        if (behaviour > 5)
+        if (mean >= 6 && behaviour >= 6)
         {
+            PlayerStats.instance.AddToMean(mean);
             nextLevelButton.SetActive(true);
-
-            if (PlayerStats.instance.currentLevel == 6) // se abbiamo finito il gioco
+            if (PlayerStats.instance.currentLevel == 6 && PlayerStats.instance.finalGrade >= 60)
             {
                 endOfLevelTitleText.text = "Finalmente maturo!";
                 endOfLevelSubtitleText.text = "È stata dura ma ce l'hai fatta!";
@@ -84,11 +99,27 @@ public class logicScript : MonoBehaviour
         }
         else
         {
+            string testo = "Che hai fatto!!??";
+            if (behaviour < 6 && mean < 6)
+            {
+                testo = "Bro, sei un disastro!";
+            }
+            else if (behaviour >= 6 && mean < 6)
+            {
+                testo = "Media troppo bassa, studia di più!";
+            }
+            else if (behaviour < 6 && mean >= 6)
+            {
+                testo = "Comportamento troppo basso, prendi più voti o meno note!";
+            }
             endOfLevelTitleText.text = "Bocciato!";
-            endOfLevelSubtitleText.text = "Troppe assenze strategiche: devi farti interrogare di più!";
+            nextLevelButton.SetActive(false);
+            endOfLevelSubtitleText.text = testo;
             endOfLevelBodyText.color = new Color32(241, 40, 6, 255);
             endOfLevelBodyText.text = "Media dei voti: " + mean.ToString("F1") + "\nCondotta: " + behaviour + "\n\nMedia totale: " + ((mean + behaviour) / 2).ToString("F1");
         }
+
+
     }
 
 
@@ -103,10 +134,10 @@ public class logicScript : MonoBehaviour
             numberOfGrades += 1;
             gradeSum += g;
         }
-        if (numberOfGrades <= 10)
+        if (numberOfGrades <= maxBehaviour)
         {
             behaviour = numberOfGrades;
-            behaviourText.text = "Condotta: " + behaviour.ToString();
+            behaviourText.text = "Condotta: " + behaviour.ToString() + "/" + maxBehaviour;
         }
 
         mean = gradeSum / numberOfGrades;
