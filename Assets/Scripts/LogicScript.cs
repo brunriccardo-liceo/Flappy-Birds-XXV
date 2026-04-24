@@ -76,7 +76,6 @@ public class logicScript : MonoBehaviour
         gameIsPaused = true;
         endOfLevel.SetActive(true);
         AudioManager.instance.PlayMusic("ScoreScreen");
-        float mediaAnno = (mean + behaviour) / 2;
 
         if (mean >= 6 && behaviour >= 6)
         {
