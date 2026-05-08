@@ -98,7 +98,6 @@ public class logicScript : MonoBehaviour
 
         if (mean >= 6 && behaviour >= 6)
         {
-            PlayerStats.instance.AddToMean(mean);
             nextLevelButton.SetActive(true);
             if (PlayerStats.instance.currentLevel == 6 && PlayerStats.instance.finalGrade >= 60)
             {

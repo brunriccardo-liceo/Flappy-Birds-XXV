@@ -24,7 +24,7 @@ public class BirdScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
+        if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive && Time.timeScale == 1)
         {
             myRigidBody.linearVelocity = new UnityEngine.Vector2(0, 1) * flapStrenght;
             AudioManager.instance.PlaySFX("flap");
