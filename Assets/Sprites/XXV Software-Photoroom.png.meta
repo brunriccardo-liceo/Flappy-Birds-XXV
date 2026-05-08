@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: 7f2bdf47d2cf3ea4a993d5f7c1a43f96
+guid: 084494c6373ed8245874d307c547c5b1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7696277477630578896
-    second: XXV Software transparent_0
+      213: 7240082800667805816
+    second: XXV Software-Photoroom_0
   - first:
-      213: -4834451376988211719
-    second: XXV Software transparent_1
+      213: 5462782494351249952
+    second: XXV Software-Photoroom_1
   - first:
-      213: 6759466181805988578
-    second: XXV Software transparent_2
+      213: 6232242947441672835
+    second: XXV Software-Photoroom_2
   - first:
-      213: 2179144713037276787
-    second: XXV Software transparent_3
+      213: -4755856913591228820
+    second: XXV Software-Photoroom_3
   - first:
-      213: 5691051347730175422
-    second: XXV Software transparent_4
+      213: 5151112296741875025
+    second: XXV Software-Photoroom_4
   - first:
-      213: -6991026039930200879
-    second: XXV Software transparent_5
+      213: -1890393657122034607
+    second: XXV Software-Photoroom_5
   - first:
-      213: 2270924204150453925
-    second: XXV Software transparent_6
+      213: 3584194145089409754
+    second: XXV Software-Photoroom_6
   - first:
-      213: -599049080958425032
-    second: XXV Software transparent_7
+      213: 6275540421680552312
+    second: XXV Software-Photoroom_7
+  - first:
+      213: -6617153168850392368
+    second: XXV Software-Photoroom_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -67,9 +70,9 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
@@ -134,12 +137,78 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: XXV Software transparent_0
+      name: XXV Software-Photoroom_0
       rect:
         serializedVersion: 2
-        x: 247
-        y: 181
-        width: 112
+        x: 0
+        y: 0
+        width: 2400
+        height: 1598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 878483692f0f97460800000000000000
+      internalID: 7240082800667805816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XXV Software-Photoroom_1
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 556
+        width: 52
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 022570d4cb3bfcb40800000000000000
+      internalID: 5462782494351249952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XXV Software-Photoroom_2
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 556
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 382c13cd0ff5d7650800000000000000
+      internalID: 6232242947441672835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: XXV Software-Photoroom_3
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 558
+        width: 39
         height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -149,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0d0920bd69baeca60800000000000000
-      internalID: 7696277477630578896
+      spriteID: c662fcea55dcffdb0800000000000000
+      internalID: -4755856913591228820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: XXV Software transparent_1
+      name: XXV Software-Photoroom_4
       rect:
         serializedVersion: 2
-        x: 265
-        y: 167
-        width: 14
-        height: 18
+        x: 1150
+        y: 557
+        width: 39
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +240,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f538be261498ecb0800000000000000
-      internalID: -4834451376988211719
+      spriteID: 15d2275975d6c7740800000000000000
+      internalID: 5151112296741875025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: XXV Software transparent_2
+      name: XXV Software-Photoroom_5
       rect:
         serializedVersion: 2
-        x: 278
-        y: 167
-        width: 11
-        height: 17
+        x: 1191
+        y: 558
+        width: 78
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +262,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2eadfcddda27ecd50800000000000000
-      internalID: 6759466181805988578
+      spriteID: 15ce69d0cf8f3c5e0800000000000000
+      internalID: -1890393657122034607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: XXV Software transparent_3
+      name: XXV Software-Photoroom_6
       rect:
         serializedVersion: 2
-        x: 286
-        y: 167
-        width: 18
-        height: 19
+        x: 1273
+        y: 557
+        width: 46
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +284,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 376e1c62290ed3e10800000000000000
-      internalID: 2179144713037276787
+      spriteID: ad2d618c59d9db130800000000000000
+      internalID: 3584194145089409754
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: XXV Software transparent_4
+      name: XXV Software-Photoroom_7
       rect:
         serializedVersion: 2
-        x: 300
-        y: 174
-        width: 13
-        height: 9
+        x: 1332
+        y: 558
+        width: 33
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +306,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eb517fb5c0daafe40800000000000000
-      internalID: 5691051347730175422
+      spriteID: 879dfd7a3c2371750800000000000000
+      internalID: 6275540421680552312
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: XXV Software transparent_5
+      name: XXV Software-Photoroom_8
       rect:
         serializedVersion: 2
-        x: 313
-        y: 171
-        width: 9
-        height: 13
+        x: 1370
+        y: 557
+        width: 50
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,52 +328,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1dc54725bd2eafe90800000000000000
-      internalID: -6991026039930200879
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: XXV Software transparent_6
-      rect:
-        serializedVersion: 2
-        x: 322
-        y: 169
-        width: 9
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5a679342881f38f10800000000000000
-      internalID: 2270924204150453925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: XXV Software transparent_7
-      rect:
-        serializedVersion: 2
-        x: 328
-        y: 174
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 838e276e800cfa7f0800000000000000
-      internalID: -599049080958425032
+      spriteID: 0da625a80462b24a0800000000000000
+      internalID: -6617153168850392368
       vertices: []
       indices: 
       edges: []
@@ -313,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +348,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      XXV Software transparent_0: 7696277477630578896
-      XXV Software transparent_1: -4834451376988211719
-      XXV Software transparent_2: 6759466181805988578
-      XXV Software transparent_3: 2179144713037276787
-      XXV Software transparent_4: 5691051347730175422
-      XXV Software transparent_5: -6991026039930200879
-      XXV Software transparent_6: 2270924204150453925
-      XXV Software transparent_7: -599049080958425032
+      XXV Software-Photoroom_0: 7240082800667805816
+      XXV Software-Photoroom_1: 5462782494351249952
+      XXV Software-Photoroom_2: 6232242947441672835
+      XXV Software-Photoroom_3: -4755856913591228820
+      XXV Software-Photoroom_4: 5151112296741875025
+      XXV Software-Photoroom_5: -1890393657122034607
+      XXV Software-Photoroom_6: 3584194145089409754
+      XXV Software-Photoroom_7: 6275540421680552312
+      XXV Software-Photoroom_8: -6617153168850392368
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

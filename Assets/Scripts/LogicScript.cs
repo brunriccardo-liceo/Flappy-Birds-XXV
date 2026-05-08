@@ -35,6 +35,24 @@ public class logicScript : MonoBehaviour
     public TextMeshProUGUI endOfLevelSubtitleText;
     public TextMeshProUGUI endOfLevelBodyText;
     public float maxBehaviour;
+
+    public GameObject blackBoard;
+
+    public void Start()
+    {
+        Time.timeScale = 0;
+        gameIsPaused = true;
+        blackBoard.SetActive(true);
+    }
+
+    public void BlackBoardContinue()
+    {
+        Time.timeScale = 1;
+        gameIsPaused = false;
+        blackBoard.SetActive(false);
+    }
+
+
     public void AbbassaCondotta()
     {
         if (maxBehaviour >= 3)
@@ -76,6 +94,7 @@ public class logicScript : MonoBehaviour
         gameIsPaused = true;
         endOfLevel.SetActive(true);
         AudioManager.instance.PlayMusic("ScoreScreen");
+        PlayerStats.instance.AddToMean(mean);
 
         if (mean >= 6 && behaviour >= 6)
         {
@@ -145,7 +164,6 @@ public class logicScript : MonoBehaviour
 
     public void NextLevel()
     {
-        PlayerStats.instance.AddToMean(mean);
         Time.timeScale = 1f;
         gameIsPaused = false;
         SceneManager.LoadScene("Level" + PlayerStats.instance.currentLevel);
@@ -153,8 +171,15 @@ public class logicScript : MonoBehaviour
     }
 
 
+
+
     public void RestartGame()
     {
+        if (bird.birdIsAlive)
+        {
+            PlayerStats.instance.RemoveToMean();
+        }
+
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         AudioManager.instance.PlayMusic("Level");
         Time.timeScale = 1;

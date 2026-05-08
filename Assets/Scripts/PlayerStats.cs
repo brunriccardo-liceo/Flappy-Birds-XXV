@@ -35,6 +35,12 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    public void RemoveToMean()
+    {
+        currentLevel -= 1;
+        means.RemoveAt(means.Count - 1);
+    }
+
 
 
 

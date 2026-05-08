@@ -176,3 +176,4 @@ MonoBehaviour:
   - {fileID: -4757644376580995070, guid: bcd4eef7632cf984786360d650c0f6b2, type: 3}
   - {fileID: 2450136366881451579, guid: df326564b054fbc4e9010a54b3457b17, type: 3}
   logicScript: {fileID: 0}
+  effectOnDestroy: {fileID: 3223031359271505891, guid: 592b24f9339e88040bc24b284a6fb1ad, type: 3}

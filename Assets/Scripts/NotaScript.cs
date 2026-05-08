@@ -5,6 +5,7 @@ public class NotaScript : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite[] matite;
     public logicScript logicScript;
+    public GameObject effectOnDestroy;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +21,9 @@ public class NotaScript : MonoBehaviour
         if (collision.gameObject.layer == 3)
         {
             logicScript.AbbassaCondotta();
+            Instantiate(effectOnDestroy, gameObject.transform.position, gameObject.transform.rotation);
+            AudioManager.instance.PlaySFX("pennaHit");
+
             Destroy(gameObject);
         }
     }
