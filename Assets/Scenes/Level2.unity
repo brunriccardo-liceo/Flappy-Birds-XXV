@@ -1700,7 +1700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a49b053087867a468200af32117ca2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::pipeSpawnScript
-  obj: {fileID: 1686307091443048458, guid: 399ce46c78583c547afbddf538950f03, type: 3}
+  obj: {fileID: 1686307091443048458, guid: 0fc12cf06a1871a47a551a164aa51529, type: 3}
   spawnRate: 2
   heightOffset: 10
 --- !u!4 &717679037
