@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System;
+using UnityEngine.UI;
 
 public class logicScript : MonoBehaviour
 {
@@ -37,6 +38,8 @@ public class logicScript : MonoBehaviour
     public float maxBehaviour;
 
     public GameObject blackBoard;
+    public Sprite[] birdpics;
+    public UnityEngine.UI.Image choosenBirdPic;
 
     public void Start()
     {
@@ -98,7 +101,8 @@ public class logicScript : MonoBehaviour
 
         if (mean >= 6 && behaviour >= 6)
         {
-            nextLevelButton.SetActive(true);
+            choosenBirdPic.sprite = birdpics[0];
+
             if (PlayerStats.instance.currentLevel == 6 && PlayerStats.instance.finalGrade >= 60)
             {
                 endOfLevelTitleText.text = "Finalmente maturo!";
@@ -108,6 +112,7 @@ public class logicScript : MonoBehaviour
             }
             else
             {
+                nextLevelButton.SetActive(true);
                 endOfLevelTitleText.text = "Promosso!";
                 endOfLevelSubtitleText.text = "Ottimo lavoro!";
                 endOfLevelBodyText.color = new Color32(39, 241, 6, 255);
@@ -116,6 +121,7 @@ public class logicScript : MonoBehaviour
         }
         else
         {
+            choosenBirdPic.sprite = birdpics[1];
             string testo = "Che hai fatto!!??";
             if (behaviour < 6 && mean < 6)
             {
@@ -123,11 +129,11 @@ public class logicScript : MonoBehaviour
             }
             else if (behaviour >= 6 && mean < 6)
             {
-                testo = "Media troppo bassa, studia di più!";
+                testo = "Insufficienze non sanabili in Scienze, Inglese, Matematica, Filosofia, Informatica, Latino, Greco, Esperanto, Musica, TEC, TAC, Tik-tok, Instagram e cucito. Il Consiglio di Classe ha deliberato la non ammissione alla classe successiva.";
             }
             else if (behaviour < 6 && mean >= 6)
             {
-                testo = "Comportamento troppo basso, prendi più voti o meno note!";
+                testo = "Forse non avresti dovuto usare ciò che hai imparato in fisica per creare quell\'esplosivo…";
             }
             endOfLevelTitleText.text = "Bocciato!";
             nextLevelButton.SetActive(false);
